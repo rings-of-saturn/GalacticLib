@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "galacticlib",
+  "version": "${version}",
+  "name": "GalaticLib",
+  "description": "Library mod for Saturn's Rings' mods",
+  "authors": [
+    "Saturn's Rings"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/galacticlib/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "rings_of_saturn.github.io.galacticlib.client.GalacticLibClient"
+    ],
+    "main": [
+      "rings_of_saturn.github.io.galacticlib.GalacticLib"
+    ],
+    "fabric-datagen": [
+      "rings_of_saturn.github.io.galacticlib.datagen.DataGenerator"
+    ]
+  },
+  "mixins": [
+    "galacticlib.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
