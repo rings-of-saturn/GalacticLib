@@ -7,7 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class BlockGen {
+public final class BlockGen {
     public static void createBlockItem(Block block, String name, String MOD_ID){
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));

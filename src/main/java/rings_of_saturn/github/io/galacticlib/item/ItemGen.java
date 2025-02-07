@@ -8,7 +8,7 @@ import rings_of_saturn.github.io.galacticlib.client.GalacticLibClient;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemGen {
+public final class ItemGen {
     public static ArrayList<Item> itemsToDatagen;
 
     public static Item createItem(String name, Item item, String MOD_ID){
@@ -16,7 +16,7 @@ public class ItemGen {
     }
 
     public static Item createDefaultModelItem(String name, Item item, String MOD_ID){
-        Item registeredItem = Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name), item);
+        Item registeredItem = createItem(name, item, MOD_ID);
         if(itemsToDatagen != null)
             itemsToDatagen.add(registeredItem);
         else
