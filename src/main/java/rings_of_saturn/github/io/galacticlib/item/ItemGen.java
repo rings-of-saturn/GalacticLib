@@ -3,11 +3,12 @@ package rings_of_saturn.github.io.galacticlib.item;
 import net.minecraft.item.Item;
 import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import rings_of_saturn.github.io.galacticlib.client.GalacticLibClient;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static rings_of_saturn.github.io.galacticlib.client.GalacticLibClient.MOD_ID;
 
 /**
  * Contains methods for generating items
@@ -16,7 +17,8 @@ public final class ItemGen {
     public static ArrayList<Item> itemsToDatagen;
 
     public static Item createItem(String name, Item item, String MOD_ID){
-        return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name)).getValue(), item);
+        RegistryKey<Item> registryKey = getItemKey(name, MOD_ID);
+        return Registry.register(Registries.ITEM, registryKey.getValue(), item);
     }
     public static RegistryKey<Item> getItemKey(String name, String MOD_ID){
         return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
@@ -34,5 +36,9 @@ public final class ItemGen {
         return registeredItem;
     }
 
-    public static final Item TEST_ITEM = createDefaultModelItem("test_item", new Item(new Item.Settings()), GalacticLibClient.MOD_ID);
+    public static final Item TEST_ITEM = createItem("test_item", new Item(new Item.Settings().registryKey(getItemKey("test_item", MOD_ID))), MOD_ID);
+
+    public static void registerItems(){
+
+    }
 }
