@@ -25,6 +25,9 @@ public final class EffectGen {
         return RegistryKey.of(RegistryKeys.STATUS_EFFECT, Identifier.of(MOD_ID, name));
     }
 
+    public EffectGen() {
+    }
+
     public static void registerEffects(){
 
     }

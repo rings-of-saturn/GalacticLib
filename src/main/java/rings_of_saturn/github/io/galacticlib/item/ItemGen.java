@@ -3,7 +3,6 @@ package rings_of_saturn.github.io.galacticlib.item;
 import net.minecraft.item.Item;
 import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;
-import rings_of_saturn.github.io.galacticlib.client.GalacticLibClient;
 
 import java.util.ArrayList;
 import java.util.List;

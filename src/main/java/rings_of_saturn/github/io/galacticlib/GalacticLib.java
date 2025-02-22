@@ -1,10 +1,8 @@
 package rings_of_saturn.github.io.galacticlib;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.item.Item;
 
 import static rings_of_saturn.github.io.galacticlib.block.BlockGen.registerBlocks;
-import static rings_of_saturn.github.io.galacticlib.item.ItemGen.itemsToDatagen;
 import static rings_of_saturn.github.io.galacticlib.item.ItemGen.registerItems;
 import static rings_of_saturn.github.io.galacticlib.potion.PotionGen.registerPotions;
 import static rings_of_saturn.github.io.galacticlib.potion.effect.EffectGen.registerEffects;
