@@ -16,7 +16,7 @@ import static rings_of_saturn.github.io.galacticlib.client.GalacticLibClient.MOD
 public final class ItemGen {
     public static ArrayList<Item> itemsToDatagen;
 
-    public static Item createItem(String name, Item item, String MOD_ID){
+    public static Item createItem(String name, String MOD_ID, Item item){
         RegistryKey<Item> registryKey = getItemKey(name, MOD_ID);
         return Registry.register(Registries.ITEM, registryKey.getValue(), item);
     }
@@ -27,8 +27,8 @@ public final class ItemGen {
     public ItemGen() {
     }
 
-    public static Item createDefaultModelItem(String name, Item item, String MOD_ID){
-        Item registeredItem = createItem(name, item, MOD_ID);
+    public static Item createDefaultModelItem(String name, String MOD_ID, Item item){
+        Item registeredItem = createItem(name, MOD_ID, item);
         if(itemsToDatagen != null)
             itemsToDatagen.add(registeredItem);
         else
@@ -36,7 +36,7 @@ public final class ItemGen {
         return registeredItem;
     }
 
-    public static final Item TEST_ITEM = createItem("test_item", new Item(new Item.Settings().registryKey(getItemKey("test_item", MOD_ID))), MOD_ID);
+    public static final Item TEST_ITEM = createItem("test_item", MOD_ID, new Item(new Item.Settings().registryKey(getItemKey("test_item", MOD_ID))));
 
     public static void registerItems(){
 
