@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "rings_of_saturn.github.io",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

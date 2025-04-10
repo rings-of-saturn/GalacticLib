@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'fabric-loom' version '1.10-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -19,10 +19,23 @@ repositories {
 }
 
 fabricApi {
-    configureDataGeneration() {
+    configureDataGeneration(){
         client = true
     }
 }
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "galacticlib" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+
+}
+
 
 publishToMavenLocal
 
