@@ -2,6 +2,8 @@ package rings_of_saturn.github.io.galacticlib;
 
 import net.fabricmc.api.ModInitializer;
 
+import java.util.logging.Logger;
+
 import static rings_of_saturn.github.io.galacticlib.block.BlockGen.registerBlocks;
 import static rings_of_saturn.github.io.galacticlib.item.ItemGen.registerItems;
 import static rings_of_saturn.github.io.galacticlib.potion.PotionGen.registerPotions;
@@ -10,6 +12,7 @@ import static rings_of_saturn.github.io.galacticlib.potion.effect.EffectGen.regi
 public final class GalacticLib implements ModInitializer {
 
     public static final String MOD_ID = "galacticlib";
+    public static Logger LOGGER = Logger.getLogger("GalacticLib");
 
     @Override
     public void onInitialize() {

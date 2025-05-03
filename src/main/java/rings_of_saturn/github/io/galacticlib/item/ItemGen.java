@@ -36,7 +36,7 @@ public final class ItemGen {
         return registeredItem;
     }
 
-    public static final Item TEST_ITEM = createItem("test_item", MOD_ID, new Item(new Item.Settings().registryKey(getItemKey("test_item", MOD_ID))));
+    public static final Item TEST_ITEM = createItem("test_item", MOD_ID, new Item(new Item.Settings()));
 
     public static void registerItems(){
 

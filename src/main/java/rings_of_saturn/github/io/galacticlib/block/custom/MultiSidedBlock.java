@@ -1,15 +1,27 @@
 package rings_of_saturn.github.io.galacticlib.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ConnectingBlock;
-import net.minecraft.block.MultifaceBlock;
+import net.minecraft.block.LichenGrower;
+import net.minecraft.block.MultifaceGrowthBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class MultiSidedBlock extends MultifaceBlock {
+public class MultiSidedBlock extends MultifaceGrowthBlock {
     public MultiSidedBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected MapCodec<? extends MultifaceGrowthBlock> getCodec() {
+        return null;
+    }
+
+    @Override
+    public LichenGrower getGrower() {
+        return null;
     }
 
     @Override

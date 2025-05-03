@@ -19,7 +19,7 @@ import static rings_of_saturn.github.io.galacticlib.GalacticLib.MOD_ID;
 public final class BlockGen {
     public static void createBlockItem(Block block, String name, String MOD_ID){
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name),
-                new BlockItem(block, new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name)))));
+                new BlockItem(block, new Item.Settings()));
     }
 
     public static Block createBlock(Block block, String name, String MOD_ID){
@@ -32,11 +32,11 @@ public final class BlockGen {
     }
 
     public static final Block TEST_BLOCK = createBlock(
-            new Block(AbstractBlock.Settings.create().registryKey(getBlockKey("test_block", MOD_ID))),
+            new Block(AbstractBlock.Settings.create()),
             "test_block",
             MOD_ID);
     public static final Block TEST_MULTISIDED_BLOCK = createBlock(
-            new MultiSidedBlock(AbstractBlock.Settings.create().registryKey(getBlockKey("test_multisided_block", MOD_ID))),
+            new MultiSidedBlock(AbstractBlock.Settings.create()),
             "test_multisided_block",
             MOD_ID);
 
