@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "rings_of_saturn.github.io",
+  "package": "rings_of_saturn.github.io.galacticlib.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
   ],
